@@ -2,7 +2,7 @@
 
 # **Author**: Josh Palgon
 
-![Vic](./Images/vic.jpg)
+![Vic](./Images/draft.jpg)
 
 ## Overview
 
@@ -70,6 +70,8 @@ Premium positions, top conferences, and age are the biggest driving factors whic
 While age is significant in predicting round 1 players, it complicates some numerical data w
 
 Rate stats better than cumulative stats mainly due to the fact that many of the best players declare their junior year and don't play in their would be senior season.
+
+## Next steps:
 
 Get more numerical data
 - Final season
