@@ -51,17 +51,13 @@ In total I ran 6 different models:
 ### Age by Position for each Round
 ![Age by Pos](./Images/agebypos.png)
 
-There is a fairly linear relationship between price and sqft_living. Additionally waterfront homes have higher prices for comparable sqft_living.
 
-### Price vs. Has a View
-![Price vs. Has a View](./Images/price_vs_view.png)
+### College Conferences
+![College Conferences](./Images/conferences.png)
 
-There is a much wider distributions of price for houses with a view than without a view. Q3 is particularly higher in view than no view. Very strong positive exponential relationship between price and grade_value. This shows the reason grade_value is one of the top features. 
 
-### Model Results
-![Model Results](./Images/model.png)
-
-My model is able to capture 0.88 of the variance in the actual price that can be explained by its predicted price.
+### Position Ratio
+![Model Results](./Images/posratio.png)
 
 ## Conclusions
 
