@@ -49,6 +49,8 @@ In total I ran 6 different models:
 ### Logistic Regression Matrix
 ![Matrix](./Images/matrix.png)
 
+Predicting enough correct first round picks is very tricky with the class imbalance. This wasn't my best model for recall but the models that maximized recall had too poor of accuracy scores to be helpful.
+
 ## Evaluation
 
 ### Age by Position for each Round
