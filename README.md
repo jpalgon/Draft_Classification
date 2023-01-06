@@ -16,11 +16,9 @@ Sqft_living had the highest correlation with price. Waterfront: $608,976, grade_
 
 ## Business Problem
 
-The Jets are trying to break the NFL's longest playoff drought. With the NFL draft being the best way to improve the team, they are looking to ga
+The Jets are trying to break the NFL's longest playoff drought. With the NFL draft being the best way to improve the team, they are looking to understand which type of players get drafted in the first round and which ones do not.
 
-Hugh Honey and Vic Vinegar want to take their real estate prowess to King County. However, as Philadelphia residents, they are not familiar with the area and would like guidance on how to conquer King County and maximize their profits for their newly founded western branch.
-
-In order to maximize profits, Hugh and Vic need to sell as many houses as they can. Additionally, if they accurately provide their customers with homes that grow in value or are currently priced too low, they can build a reputation of making their customers happy in both the short and long term. This will help drive more customers to choose Honey and Vinegar Real Estate.
+Understanding which players get drafted in the first round or not has several applications but the primary application would be when choosing between several players in the first round. If the front office is having a hard time deciding between multiple players (which happens often) they can select the player who was predicted to be a first round pick versus any players who weren't in hopes they could select that player later in the draft.
 
 ## Data
 
