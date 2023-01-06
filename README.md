@@ -32,9 +32,9 @@ Additionally, I supplemented the sportsreference data with the NFL_data Python p
 
 For my modeling I separated my numeric columns from my categorical columns. On my categorical columns, I OneHotEncoded them. On my numerical columns, I used a simple imputer to handle the NaNs and impute 0 as any NaN should be 0 anyway based on how I scraped my data. Additionally, I used a MinMaxScaler on the numerical data. I chose a MinMaxScaler because I had a very imbalanced dataset and MinMaxScaler works better on imbalanced data than a StandardScaler.
 
-Having an imbalanced data set made me use an oversampling technique. I put both SMOTE and RandomOverSampler into my grid parameters. For most of my models RandomOverSampler was the best parameter for oversampling.
+Late in the game I tried combinations of SMOTE, RandomOverSampler and RandomUnderSampler with different strategy weights. The use of RandomUnderSampler created an increase in recall but at the cost of accuracy. I will continue to tune these parameters for all models in attempt to get some better results. For my final model oversampling with a strategy ratio of 1 was my best to balance the data.
 
-Next I created my grid with each parameter for the given model along with the oversampling technique.
+Next I created my grid with each parameter for the given model along with the sampling technique. 
 
 Finally I threw my grid into a gridsearch with the combined transformations, the model type itself and a Cross Validation of 5. I chose recall as my metric to maximize as I did not want to misclassify a players who was drafted in round 1 as a non first round player.
 
@@ -48,8 +48,8 @@ In total I ran 6 different models:
 
 ## Evaluation
 
-### Price vs. Sqft_living
-![Price vs. Sqft_living](./Images/price_vs_sqft.png)
+### Age by Position for each Round
+![Age by Pos](./Images/agebypos.png)
 
 There is a fairly linear relationship between price and sqft_living. Additionally waterfront homes have higher prices for comparable sqft_living.
 
@@ -65,9 +65,21 @@ My model is able to capture 0.88 of the variance in the actual price that can be
 
 ## Conclusions
 
-My three step process allowed me to find the features with the highest correlation with price, the features that have the highest coefficients with price after running a baseline model, and the features that are undervalued when being compared to my final model. Therefore Honey and Vinegar Real Estate should focus on houses with high sqft_living, grade_values, view, and sqft_living_15 that is on a waterfront, and are in 98010, 98118, 98146, 98122, 98033 zip codes. 
+Premium positions, top conferences, and age are the biggest driving factors
 
-For the next steps I would like to get housing data from these houses and their prices in future years to see if my model accurately predicted what was undervalued. Additionally, I would like to explore the longitude and latitude aspects of the data to specifically plot areas within zip codes to further hone in my recommendation.
+While age is significant in predicting round 1 players, it complicates some numerical data
+
+Rate stats better than cumulative stats mainly due to the fact that many of the best players declare their junior year and don't play in their would be senior season.
+
+Get more numerical data
+Final season
+Advanced stats
+Non Primary Stats
+More bio information
+
+Add scouting report information and other non numeric data
+
+Build in extra time to web scrape. 
 
 ## For More Information
 
