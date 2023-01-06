@@ -6,13 +6,13 @@
 
 ## Overview
 
-My New York Jets are looking to gain additional insight into the most important area to improve their team...the NFL draft. I am going to help Joe Douglas and the Jets front office 
+My New York Jets are looking to gain additional insight into the most important area to improve their team...the NFL draft. I am going to help Joe Douglas and the Jets front office better understand what types of players get drafted in the first and which ones do not.
 
-Hugh Honey and Vic Vinegar have decided to expand Honey and Vinegar Real Estate into King County. I have been tasked with helping Hugh and Vic navigate the King County market and maximize profits. In order to maximize profits I am going to look at which features impact the price of a King County home the most. The data source provided is from Kaggle and contains King County housing data from May 2014 until May 2015.
+My data was web scraped from sports-reference.com and merged with the NFL_data Python package. The scraping took some time but once I found out the sites web scraping rules, I was able to set a sleep timer and properly run it all.
 
-The two main issues for cleaning the data set was converting all the object data types into a numeric data type and imputing or removing missing data. My goal was to remove as little data as possible and carefully impute the data in the most accurate way.
+Premium positions were extremely important for determining whether a player was drafted in round 1. 4 of the top 5 position ratios of players drafted in the first round were premium positions. Additionally, college conference had a similar effect all of the top 5 college conference ratios come from a power 5 conference.
 
-Sqft_living had the highest correlation with price. Waterfront: $608,976, grade_value: $99,787 and view: $68,547 were three of the highest coefficients in my baseline model. After running my model, I compared the actual price vs my predicted price. I looked at the highest values of my predicted price subtracted by the actual price to find what actual prices may be undervalued/underpriced. Waterfront, view, and the zip codes: 98010, 98118, 98146, 98122, 98033 were the most undervalued features. My recommendation for Honey and Vinegar real estate would be to focus on houses that maximize sqft_living, have high grade_values and view rating, have a waterfront or are in the 5 undervalued zip codes.
+Every single position had a lower age for round 1 players than non round 1 players. 
 
 ## Business Problem
 
@@ -25,6 +25,8 @@ Understanding which players get drafted in the first round or not has several ap
 The majority of my data was web scraped from sports-reference.com. This was my first time web scraping which was somewhat problematic for completing this project. There were two prongs to scraping the data from sports-reference. The first prong of getting the list of players for each draft from 2013-2022 was actually done by Savvas Tjortjoglou. Almost all of his worked perfectly but I made a few adjustments to make it run properly and for my time period. Here is the link of his work http://savvastjortjoglou.com/nfl-draft.html. There were a few very important data points I got from the first prong but the bulk of the data and my time lied in the second prong. 
 
 The second prong consisted of scraping each players college stats page with the  link that I got in part of the first prong. Most of my issues came from this prong mainly due to hard to scrape tags that were not the players' primary stat category. For example QBs passing data was fairly easily scrapable but their rushing stats table while tagged the same way did not come that easy. In the end I was not able to get any secondary or beyond category. Once I figured out how to scrape the primary categories for each player I kept running into 429 HTTP Error requests. Right before I was about to give up on this data, I remembered coming across sports-reference's site on their data usage. They actually had a page that gave an explicit description of what they block. It turns out I just needed to run a sleep time of greater than 3 seconds for that error to no longer occur. They do update their page so I proved the link here https://www.sports-reference.com/bot-traffic.html.
+
+Additionally, I supplemented the sportsreference data with the NFL_data Python package for a few extra features.
 
 ## Methods and Modeling
 
