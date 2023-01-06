@@ -51,27 +51,31 @@ In total I ran 6 different models:
 ### Age by Position for each Round
 ![Age by Pos](./Images/agebypos.png)
 
+For each position the age of the round 1 players is significantly lower than the non round 1 players.
 
 ### College Conferences
 ![College Conferences](./Images/conferences.png)
 
+The power 5 conferences have all of the highest ratios of players drafted in round 1.
 
 ### Position Ratio
 ![Model Results](./Images/posratio.png)
 
+Premium positions have the highest ratios of players drafted in round 1.
+
 ## Conclusions
 
-Premium positions, top conferences, and age are the biggest driving factors
+Premium positions, top conferences, and age are the biggest driving factors which isn't surprising.
 
-While age is significant in predicting round 1 players, it complicates some numerical data
+While age is significant in predicting round 1 players, it complicates some numerical data w
 
 Rate stats better than cumulative stats mainly due to the fact that many of the best players declare their junior year and don't play in their would be senior season.
 
 Get more numerical data
-Final season
-Advanced stats
-Non Primary Stats
-More bio information
+- Final season
+- Advanced stats
+- Non Primary Stats
+- More bio information
 
 Add scouting report information and other non numeric data
 
@@ -79,7 +83,7 @@ Build in extra time to web scrape.
 
 ## For More Information
 
-Please look at my full analysis in [my Jupyter Notebooks](./Notebooks) or my [presentation](./King_County_Presentation.pdf).
+Please look at my full analysis in [my Jupyter Notebooks](./Draft_Classification) or my [presentation](./Draft_Classification.pdf).
 
 For any additional questions, please contact:
 
