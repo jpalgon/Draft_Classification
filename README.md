@@ -6,7 +6,7 @@
 
 ## Overview
 
-My New York Jets are looking to gain additional insight into the most important area to improve their team...the NFL draft. I am going to help Joe Douglas and the Jets front office better understand what types of players get drafted in the first and which ones do not.
+My New York Jets are looking to gain additional insight into the most important area to improve their team...the NFL Draft. I am going to help Joe Douglas and the Jets front office better understand what types of players get drafted in the first and which ones do not.
 
 My data was web scraped from sports-reference.com and merged with the NFL_data Python package. The scraping took some time but once I found out the sites web scraping rules, I was able to set a sleep timer and properly run it all.
 
@@ -16,7 +16,7 @@ Every single position had a lower age for round 1 players than non round 1 playe
 
 ## Business Problem
 
-The Jets are trying to break the NFL's longest playoff drought. With the NFL draft being the best way to improve the team, they are looking to understand which type of players get drafted in the first round and which ones do not.
+The Jets are trying to break the NFL's longest playoff drought. With the NFL Draft being the best way to improve the team, they are looking to understand which type of players get drafted in the first round and which ones do not.
 
 Understanding which players get drafted in the first round or not has several applications but the primary application would be when choosing between several players in the first round. If the front office is having a hard time deciding between multiple players (which happens often) they can select the player who was predicted to be a first round pick versus any players who weren't in hopes they could select that player later in the draft.
 
