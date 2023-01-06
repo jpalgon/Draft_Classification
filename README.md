@@ -28,25 +28,25 @@ The second prong consisted of scraping each players college stats page with the 
 
 Additionally, I supplemented the sportsreference data with the NFL_data Python package for a few extra features.
 
-## Methods and Modeling
+## Modeling
 
-My first step in understanding the data was to look at features that had the highest correlation with price. Sqft_living was the top feature followed by grade_value and sqft_living15 (the sqft of living for the nearest 15 neighbors). 
+For my modeling I separated my numeric columns from my categorical columns. On my categorical columns, I OneHotEncoded them. On my numerical columns, I used a simple imputer to handle the NaNs and impute 0 as any NaN should be 0 anyway based on how I scraped my data. Additionally, I used a MinMaxScaler on the numerical data. I chose a MinMaxScaler because I had a very imbalanced dataset and MinMaxScaler works better on imbalanced data than a StandardScaler.
 
-My next step was to run my first linear regression model. I wanted to establish a good baseline model to pull out coefficients. Waterfront ($608,976), Grade ($99,787), View ($68,547) were among my top coefficients after running my baseline model.
+Having an imbalanced data set made me use an oversampling technique. I put both SMOTE and RandomOverSampler into my grid parameters. For most of my models RandomOverSampler was the best parameter for oversampling.
 
-I wanted to start my model as simple as possible so I just ran a linear regression on price using sqft_living (R2 = 0.49). Over 4 steps, I added some of the most important features to get an R2 = 0.70.
+Next I created my grid with each parameter for the given model along with the oversampling technique.
 
-In my next modeling step I took the log of price and again started with just price (this time logged) using sqft_living (R2 = 0.45). While it started off lower than my first block of models after adding more important features I got an R2 = 0.77.
+Finally I threw my grid into a gridsearch with the combined transformations, the model type itself and a Cross Validation of 5. I chose recall as my metric to maximize as I did not want to misclassify a players who was drafted in round 1 as a non first round player.
 
-Next, I One Hot Encoded zip code. With just sqft_living and zip code One Hot Encoded my R2 = 0.72. Without any log transformations I added some of the most important features to this block and got my baseline R2 = 0.80.
+In total I ran 6 different models:
+- Logistic Regression
+- Gaussian NB
+- Decision Tree
+- Random Forest
+- KNN
+- XGBoost
 
-I kept doing this same method on different combinations of standard price, transformed price, standard sqfts', transformed sqfts', One Hot Encoded zip code and no One Hot Encoded zip codes.
-
-My best and final model using logged price, transformed sqfts' and One Hot Encoded zip code got an R2 = 0.88.
-
-My final step was to take the predictions of my final model and compare it to the actual prices. I wanted to look at the area where my model projected a higher price than the actual price to see what in the market might be undervalued. I found waterfront, view, and the zip codes: 98010, 98118, 98146, 98122, 98033 to be my most undervalued features. 
-
-## Results
+## Evaluation
 
 ### Price vs. Sqft_living
 ![Price vs. Sqft_living](./Images/price_vs_sqft.png)
