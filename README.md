@@ -83,7 +83,7 @@ Build in extra time to web scrape.
 
 ## For More Information
 
-Please look at my full analysis in [my Jupyter Notebooks](https://github.com/jpalgon/Draft_Classification) or my [presentation](.Draft_Classification.pdf).
+Please look at my full analysis in [my Jupyter Notebooks](https://github.com/jpalgon/Draft_Classification) or my [presentation](./Draft_Classification.pdf).
 
 For any additional questions, please contact:
 
