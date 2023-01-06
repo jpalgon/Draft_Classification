@@ -46,6 +46,9 @@ In total I ran 6 different models:
 - KNN
 - XGBoost
 
+### Logistic Regression Matrix
+![Matrix](./Images/matrix.png)
+
 ## Evaluation
 
 ### Age by Position for each Round
