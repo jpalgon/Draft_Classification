@@ -49,7 +49,7 @@ In total I ran 6 different models:
 ### Logistic Regression Matrix
 ![Matrix](./Images/matrix.png)
 
-Predicting enough correct first round picks is very tricky with the class imbalance. Logistic Regression wasn't my best model for recall but the models that maximized recall had too poor of accuracy scores to be helpful.
+Predicting enough correct first round picks is very tricky with the class imbalance. Logistic Regression wasn't my best model for recall but the models that maximized recall had too poor of accuracy scores to be helpful. While I was hoping for some better predictions, this model is on the right track as it's accuracy was solid especially given was projecting players in the first round at a much higher rate than the classes indicate.
 
 ## Evaluation
 
