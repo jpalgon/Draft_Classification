@@ -61,12 +61,12 @@ For each position the age of the round 1 players is significantly lower than the
 ### College Conferences
 ![College Conferences](./Images/conferences.png)
 
-The power 5 conferences have all of the highest ratios of players drafted in round 1. 12.5% is the expected first round rate.
+The power 5 conferences have all of the highest ratios of players drafted in round 1. 12.5% is the expected first round ratio.
 
 ### Position Ratio
 ![Model Results](./Images/posratio.png)
 
-Premium positions have the highest ratios of players drafted in round 1. 12.5% is the expected first round rate.
+Premium positions have the highest ratios of players drafted in round 1. 12.5% is the expected first round ratio.
 
 ## Conclusions
 
