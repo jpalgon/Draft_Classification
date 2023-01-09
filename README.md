@@ -49,7 +49,7 @@ In total I ran 6 different models:
 ### Logistic Regression Matrix
 ![Matrix](./Images/matrix.png)
 
-Predicting enough correct first round picks is very tricky with the class imbalance. This wasn't my best model for recall but the models that maximized recall had too poor of accuracy scores to be helpful.
+Predicting enough correct first round picks is very tricky with the class imbalance. Logistic Regression wasn't my best model for recall but the models that maximized recall had too poor of accuracy scores to be helpful.
 
 ## Evaluation
 
@@ -61,24 +61,24 @@ For each position the age of the round 1 players is significantly lower than the
 ### College Conferences
 ![College Conferences](./Images/conferences.png)
 
-The power 5 conferences have all of the highest ratios of players drafted in round 1.
+The power 5 conferences have all of the highest ratios of players drafted in round 1. 12.5% is the expected first round rate.
 
 ### Position Ratio
 ![Model Results](./Images/posratio.png)
 
-Premium positions have the highest ratios of players drafted in round 1.
+Premium positions have the highest ratios of players drafted in round 1. 12.5% is the expected first round rate.
 
 ## Conclusions
 
 Premium positions, top conferences, and age are the biggest driving factors which isn't surprising.
 
-While age is significant in predicting round 1 players, it complicates some numerical data w
+While age is significant in predicting round 1 players, it complicates some takeaways from numerical data.
 
 Rate stats better than cumulative stats mainly due to the fact that many of the best players declare their junior year and don't play in their would be senior season.
 
 ## Next steps:
 
-Get more numerical data
+Get more data
 - Final season
 - Advanced stats
 - Non Primary Stats
@@ -86,7 +86,11 @@ Get more numerical data
 
 Add scouting report information and other non numeric data
 
-Build in extra time to web scrape. 
+## What I learned
+
+If you are going to web scrape data, make sure to give yourself extra time to either get the scraper to work or to have a backup plan. If I had not found the guide on the web scraping requirements of sportsreference I am not sure I would have gotten the numerical data I had.
+
+Due to the web scraping not being finished until a few days before the project was due, I was not able to finish nearly as much as I would have liked. After seeing my models' results I realized that I needed more data. For starters I would have added at least 5 more years to the data. Additionally, I would have gotten each individual college season for each player instead of just their career totals. There is the possibility that additional information would not have made much of a difference as projecting the NFL draft is a very difficult task, however it would have been good to do this step after my models' yielded somewhat underwhelming results.
 
 ## For More Information
 
